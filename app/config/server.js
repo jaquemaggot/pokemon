@@ -1,10 +1,12 @@
 //Importando Express
 const express = require('express');
 const app = express();
+const path = require('path');
 //Buscando BD
 require('./dbconnection');
 
-app.use(express.json());
+app.use('/public', express.static(path.resolve(__dirname, '../public')));
+app.use(express.json({limit: '50mb'}));
 //Importando Rotas
 const PokemonRoutes = require('../routes/PokemonRoutes');
 app.use('/pokemon', PokemonRoutes);

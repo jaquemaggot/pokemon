@@ -4,5 +4,7 @@ const router = express.Router();
 const PokemonController = require('../controller/PokemonController');
 
 
-router.get('/', PokemonController.listar);
+router.get('/', PokemonController.getAll);
+router.get('/:number', PokemonController.findByNumber);
+router.post('/excel', PokemonController.impPlanilha);
 module.exports = router;

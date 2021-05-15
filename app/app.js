@@ -1,1 +1,1 @@
-const server = require('../app/config/server');
+require('../app/config/server');

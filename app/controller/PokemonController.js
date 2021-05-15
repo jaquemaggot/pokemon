@@ -1,19 +1,37 @@
+const repository = require('../repository/pokemonRepository');
+const service = require('../service/PokemonService');
+
 //Funções que serão exportadas para serem usadas em outros módulos.
 module.exports = {
-    listar
+    getAll,
+    findByNumber,
+    impPlanilha
 }
-//Importando Banco
-var db = require('../config/dbconnection');
-function listar(req,res){
-    db.query('SELECT * FROM POKEMONS', function (error, results) {
-        if (error){
-            return res.status(500).json({
-                error
-            });
-        }
-        res.json({
-            message : "OK",
-            pokemons : results
-        });
-    });
+
+async function getAll(req, res){
+    try {
+        console.log(req.query)
+        const pokemons = await repository.getAll(req.query);
+        res.json({ message : "OK", pokemons });
+    } catch(error) {
+        res.status(500).json({ error });
+    }
+}
+
+async function findByNumber(req, res){
+    try {
+        const pokemons = await repository.findByNumber(req.params.number);
+        res.json({ pokemon: pokemons[0] });
+    } catch(error) {
+        res.status(500).json({ error });
+    }
+}
+
+async function impPlanilha(req, res) {
+    try {
+        await service.readExcel(req.body.excel);
+        res.json({ message: 'OK' })
+    } catch(error) {
+        res.status(500).json({ error });
+    }
 }

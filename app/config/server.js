@@ -1,13 +1,12 @@
+//Importando Express
 const express = require('express');
 const app = express();
+//Buscando BD
+require('./dbconnection');
 
 app.use(express.json());
-//criando rota
-//navegador sempre executa GET
-
-
+//Importando Rotas
 const PokemonRoutes = require('../routes/PokemonRoutes');
-//Colocando o arquivo que irá ter todas as rotas dentro da API
 app.use('/pokemon', PokemonRoutes);
 
 //Informando em que porta vai rodar
@@ -15,4 +14,5 @@ app.listen(3000, () => {
     console.log('API ONLINE')
 });
 
+//Exportando os dados de app(server)
 module.exports = app;

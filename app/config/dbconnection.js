@@ -9,11 +9,11 @@ function init() {
   if(!db){
     //Configurando um Pool para gerenciar as conexões ao banco(Simultaneas)
     db = mysql.createPool({
-        connectionLimit : 1,
-        host            : 'localhost',
-        user            : 'root',
-        password        : '',
-        database        : 'pokemon'
+        connectionLimit : process.env.CONNECTION_LIMIT || 1,
+        host            : process.env.MYSQL_HOST,
+        user            : process.env.MYSQL_USER,
+        password        : process.env.MYSQL_PASSWORD || '',
+        database        : process.env.MYSQL_DATABASE
       });
     }
 }

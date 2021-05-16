@@ -4,7 +4,7 @@ module.exports = {
   executeQuery
 }
 
-
+//Função para executar a query
 async function executeQuery(query, params) {
   return new Promise((resolve, reject) => {
     db.query(query, params, (err, results) => {

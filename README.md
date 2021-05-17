@@ -7,6 +7,7 @@
 * [Ambiente](#ambiente)
 * [Arquitetura de pastas](#arquitetura-de-pastas)
 * [Instalação](#instalação)
+* [Importar planilha](#importar-planilha)
 
 ## Informação
 Projeto para cadastro de pokemons via excel
@@ -70,5 +71,16 @@ npm i
 **Executar o projeto:**
 
 ```sh
-nodemon app\app.js
+npm start
+```
+
+## Importar planilha
+
+Fazer uma requisicao POST: **/pokemon/excel**
+
+Body:
+```bash
+{
+  "excel:" "base64 do arquivo aqui"
+}
 ```

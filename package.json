@@ -4,7 +4,7 @@
   "description": "sistema de cadastro de pokemons",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app/app.js"
   },
   "author": "Jaqueline",
   "license": "ISC",

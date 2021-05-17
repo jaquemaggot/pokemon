@@ -100,7 +100,8 @@ GET - /pokemon/number -> busca um pokemon pelo numero
 
 ```bash
 POST - /pokemon/excel -> cadastrar ou atualizar os pokemons atraves de uma planilha
-
+*Use o link para convertar a planilha em formato base64
+https://base64.guru/converter/encode/file
 body:
 {
   "excel": "base64 do arquivo aqui"

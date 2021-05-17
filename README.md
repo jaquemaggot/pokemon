@@ -93,7 +93,7 @@ parametros (query parameters):
 ```
 
 ```bash
-GET - /pokemon/:number -> busca um pokemon pelo numero
+GET - /pokemon/number -> busca um pokemon pelo numero
 ```
 
 ```bash

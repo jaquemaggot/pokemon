@@ -26,27 +26,27 @@ async function getAll(params){
     }
     //Filtro por Tipo1
     if(params.type1) {
-        query += ` AND TYPE1 = '%${params.type1}%'`  
+        query += ` AND TYPE1 = '${params.type1}'`  
     }
     //Filtro por Tipo2
     if(params.type2) {
-        query += ` AND TYPE1 = '%${params.type2}%'`  
+        query += ` AND TYPE1 = '${params.type2}'`  
     }
     //Filtro pelo status
     if(params.spa) {
-        query += ` AND SPA = '%${params.spa}%'`  
+        query += ` AND SPA = '${params.spa}'`  
     }
     //Filtro pelo status
     if(params.spd) {
-        query += ` AND SPD = '%${params.spd}%'`  
+        query += ` AND SPD = '${params.spd}'`  
     }
     //Filtro pelo status
     if(params.spe) {
-        query += ` AND SPE = '%${params.spe}%'`  
+        query += ` AND SPE = '${params.spe}'`  
     }
     //Filtro pelo total status
     if(params.total_status) {
-        query += ` AND TOTAL_STATUS = '%${params.total_status}%'`  
+        query += ` AND TOTAL_STATUS = '${params.total_status}'`  
     }
 
     //Deixando a query ordenada por Name(Alfabetica)

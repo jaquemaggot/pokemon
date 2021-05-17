@@ -19,6 +19,7 @@ Projeto para cadastro de pokemons via excel
 ## Ambiente
 Configure as variáveis de ambiente:
 * Use um arquivo `.env`: **(Use o arquivo .env.example como referência)**
+* Deixe no arquivo .env apenas as informações que estão sendo passadas, caso não esteja passando todas apague a linha
 
 | Nome                           | Descrição                                                     | Valor Padrao | Obrigatorio |
 |--------------------------------|---------------------------------------------------------------|--------------|-------------|

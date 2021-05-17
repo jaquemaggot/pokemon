@@ -70,7 +70,5 @@ npm i
 **Executar o projeto:**
 
 ```sh
-npm start
-ou
 nodemon app\app.js
 ```

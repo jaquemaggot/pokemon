@@ -16,6 +16,12 @@ Projeto para cadastro de pokemons via excel
 * [Node 14.16.1](https://nodejs.org/en/)
 * [Mysql 5.7](https://www.mysql.com/)
 
+**Criar a tabela no banco de dados:**
+
+```sh
+executar o script init.sql no banco de dados Mysql
+```
+
 ## Ambiente
 Configure as variáveis de ambiente:
 * Use um arquivo `.env`: **(Use o arquivo .env.example como referência)**
@@ -56,12 +62,6 @@ pokemon
 ## Instalação
 
 Acessar a pasta raiz do projeto:
-
-**Criar a tabela no banco de dados:**
-
-```sh
-executar o script init.sql no banco de dados Mysql
-```
 
 **Instalar as dependências:**
 

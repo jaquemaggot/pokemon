@@ -71,4 +71,5 @@ npm i
 
 ```sh
 npm start
+nodemon app\app.js
 ```

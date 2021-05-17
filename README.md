@@ -78,6 +78,7 @@ npm start
 ## Rotas
 
 ```bash
+Para testar as rotas utilize Insomnia ou Postman
 GET - /pokemon -> lista todos os pokemons de forma paginada com filtros (query na url)
 
 parametros (query parameters):

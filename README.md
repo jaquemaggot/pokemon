@@ -12,6 +12,10 @@
 ## Informação
 Projeto para cadastro de pokemons via excel
 
+## Clone
+Para iniciar as configurações clone o projeto
+https://github.com/jaquemaggot/pokemon.git
+
 ## Requisitos
 * [Node 14.16.1](https://nodejs.org/en/)
 * [Mysql 5.7](https://www.mysql.com/)

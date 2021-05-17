@@ -7,7 +7,7 @@
 * [Ambiente](#ambiente)
 * [Arquitetura de pastas](#arquitetura-de-pastas)
 * [Instalação](#instalação)
-* [Importar planilha](#importar-planilha)
+* [Rotas](#rotas)
 
 ## Informação
 Projeto para cadastro de pokemons via excel
@@ -74,13 +74,33 @@ npm i
 npm start
 ```
 
-## Importar planilha
+## Rotas
 
-Fazer uma requisicao POST: **/pokemon/excel**
-
-Body:
 ```bash
+GET - /pokemon -> lista todos os pokemons de forma paginada com filtros (query na url)
+
+parametros (query parameters):
+ - page -> pagina solicitada (default 1)
+ - limit -> quantidade de registros por pagina (default 10)
+ - name -> nome do pokemon
+ - number -> numero do pokemon
+ - type1 -> tipo 1 do pokemon
+ - type2 -> tipo 1 do pokemon
+ - spa -> SPA do pokemon
+ - spd -> SPD do pokemon
+ - spe -> SPE do pokemon
+ - total_status -> status total do pokemon
+```
+
+```bash
+GET - /pokemon/:number -> busca um pokemon pelo numero
+```
+
+```bash
+POST - /pokemon/excel -> cadastrar ou atualizar os pokemons atraves de uma planilha
+
+body:
 {
-  "excel:" "base64 do arquivo aqui"
+  "excel": "base64 do arquivo aqui"
 }
 ```

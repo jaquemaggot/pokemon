@@ -8,31 +8,33 @@ module.exports = {
 }
 
 //Lendo a planilha e obtendo os dados dela
-async function readExcel(excelBase64) {
+async function readExcel() {
     //Pegando o caminho absoluto
     const filePath = path.resolve(__dirname, '../public/planilha/Pokedex.xlsx');
     //Fazendo o Upload da planilha
-    uploadLocalFile(excelBase64, filePath)
+    //uploadLocalFile(excelBase64, filePath)
+    
     //Colocando os dados da planilha em uma var
     var planilha = XLSX.readFile(filePath);
     //convertendo os dados para exibir em .json
     const workbook = XLSX.utils.sheet_to_json(planilha.Sheets.Planilha1, { raw: false });
     //Chamando a função de Insert para inserir os dados no banco
     await insert(workbook);
+
     //Removendo a planilha da pasta após a inserção
-    removeFileFromLocalFolder(filePath);
+    //removeFileFromLocalFolder(filePath);
 }
 
 //Função que realiza a importação da planilha
-function uploadLocalFile(excelBase64, filePath) {
-    fs.writeFileSync(filePath, excelBase64, 'base64')
-}
+//function uploadLocalFile(excelBase64, filePath) {
+  //  fs.writeFileSync(filePath, excelBase64, 'base64')
+//}
 //Função para remover a planilha da pasta
-function removeFileFromLocalFolder(filePath) {
+//function removeFileFromLocalFolder(filePath) {
     //Se existir remova;
-    if (fs.existsSync(filePath))
-      fs.unlinkSync(filePath);
-  }
+  //  if (fs.existsSync(filePath))
+    //  fs.unlinkSync(filePath);
+  //}
 
 //Função que realiza a inserção no banco de dados
 async function insert(workbook) {

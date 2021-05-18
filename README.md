@@ -20,6 +20,7 @@ https://github.com/jaquemaggot/pokemon.git
 * [Node 14.16.1](https://nodejs.org/en/)
 * [Mysql 5.7](https://www.mysql.com/)
 
+##Primeira ação
 **Criar a tabela no banco de dados:**
 
 ```sh
@@ -104,10 +105,5 @@ GET - /pokemon/number -> busca um pokemon pelo numero
 
 ```bash
 POST - /pokemon/excel -> cadastrar ou atualizar os pokemons atraves de uma planilha
-*Use o link para convertar a planilha em formato base64
-https://base64.guru/converter/encode/file
-body:
-{
-  "excel": "base64 do arquivo aqui"
-}
+*Coloque a Planilha excel na pasta, Planilha (\app\public\planilha)
 ```
